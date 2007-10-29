@@ -2,7 +2,7 @@
 %define plugin	control
 %define name	vdr-plugin-%plugin
 %define version	0.0.2a
-%define rel	10
+%define rel	11
 
 Summary:	VDR plugin: Control VDR over terminal or telnet
 Name:		%name
