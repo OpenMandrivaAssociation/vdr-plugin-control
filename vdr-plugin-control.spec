@@ -13,6 +13,7 @@ License:	GPL
 URL:		http://ricomp.de/vdr/
 Source:		http://ricomp.de/vdr/vdr-%plugin-%version.tar.bz2
 Patch1:		http://deela.cc.fh-lippe.de/files/vdr-control/control-0.0.2a.patch
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.4.1-6
 Requires:	vdr-abi = %vdr_abi
 
