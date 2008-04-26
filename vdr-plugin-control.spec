@@ -2,7 +2,7 @@
 %define plugin	control
 %define name	vdr-plugin-%plugin
 %define version	0.0.2a
-%define rel	12
+%define rel	13
 
 Summary:	VDR plugin: Control VDR over terminal or telnet
 Name:		%name
@@ -13,8 +13,10 @@ License:	GPL
 URL:		http://ricomp.de/vdr/
 Source:		http://ricomp.de/vdr/vdr-%plugin-%version.tar.bz2
 Patch1:		http://deela.cc.fh-lippe.de/files/vdr-control/control-0.0.2a.patch
+Patch2:		02_gateway.dpatch
+Patch3:		93_control-0.0.2a-1.5.0.dpatch
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	vdr-devel >= 1.4.1-6
+BuildRequires:	vdr-devel >= 1.6.0
 Requires:	vdr-abi = %vdr_abi
 
 %description
@@ -24,6 +26,9 @@ the whole OSD over a telnet client.
 %prep
 %setup -q -n %plugin-%version
 %patch1 -p1 -b .1318
+%patch2 -p1
+%patch3 -p1
+%vdr_plugin_prep
 
 %vdr_plugin_params_begin %plugin
 # tty to control vdr per virtual terminal
