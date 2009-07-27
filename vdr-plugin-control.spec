@@ -15,6 +15,7 @@ Source:		http://ricomp.de/vdr/vdr-%plugin-%version.tar.bz2
 Patch1:		http://deela.cc.fh-lippe.de/files/vdr-control/control-0.0.2a.patch
 Patch2:		02_gateway.dpatch
 Patch3:		93_control-0.0.2a-1.5.0.dpatch
+Patch4:		control-const-char-gcc4.4.patch
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.6.0
 Requires:	vdr-abi = %vdr_abi
@@ -28,6 +29,7 @@ the whole OSD over a telnet client.
 %patch1 -p1 -b .1318
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 %vdr_plugin_prep
 
 %vdr_plugin_params_begin %plugin
