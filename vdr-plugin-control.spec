@@ -2,7 +2,7 @@
 %define plugin	control
 %define name	vdr-plugin-%plugin
 %define version	0.0.2a
-%define rel	16
+%define rel	17
 
 Summary:	VDR plugin: Control VDR over terminal or telnet
 Name:		%name
@@ -16,7 +16,6 @@ Patch1:		http://deela.cc.fh-lippe.de/files/vdr-control/control-0.0.2a.patch
 Patch2:		02_gateway.dpatch
 Patch3:		93_control-0.0.2a-1.5.0.dpatch
 Patch4:		control-const-char-gcc4.4.patch
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.6.0
 Requires:	vdr-abi = %vdr_abi
 
@@ -47,17 +46,7 @@ param=--port=PORT
 %vdr_plugin_build
 
 %install
-rm -rf %{buildroot}
 %vdr_plugin_install
-
-%clean
-rm -rf %{buildroot}
-
-%post
-%vdr_plugin_post %plugin
-
-%postun
-%vdr_plugin_postun %plugin
 
 %files -f %plugin.vdr
 %defattr(-,root,root)
