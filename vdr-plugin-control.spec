@@ -3,7 +3,7 @@
 Summary:	VDR plugin: Control VDR over terminal or telnet
 Name:		vdr-plugin-%plugin
 Version:	0.0.2a
-Release:	19
+Release:	20
 Group:		Video
 License:	GPL
 URL:		http://ricomp.de/vdr/
