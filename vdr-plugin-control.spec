@@ -6,7 +6,7 @@ Version:	0.0.2a
 Release:	20
 Group:		Video
 License:	GPL
-URL:		http://ricomp.de/vdr/
+URL:		https://ricomp.de/vdr/
 Source:		http://ricomp.de/vdr/vdr-%plugin-%{version}.tgz
 Patch1:		http://deela.cc.fh-lippe.de/files/vdr-control/control-0.0.2a.patch
 Patch2:		02_gateway.dpatch
